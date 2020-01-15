@@ -14,7 +14,8 @@ trait Controller
     public function resources()
     {
         $method = strtolower($_SERVER['REQUEST_METHOD'] ?? '');
-
+        //dump(session('wechat_config'));die;
+        Manager::getInstance()->setConfig(session('wechat_config'));
         try {
             if ($method == 'get') {
                 return Data::getResources($_GET);

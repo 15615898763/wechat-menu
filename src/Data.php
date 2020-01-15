@@ -85,7 +85,6 @@ class Data
     public static function getData(string $type = null)
     {
         $data = safe_json_decode(@file_get_contents(Manager::getInstance()->getConfig('data_path')), []);
-
         if (!$type) {
             return $data;
         } else {
@@ -158,7 +157,6 @@ class Data
     public static function getResources(array $data)
     {
         $type = static::checkAndGetType($data);
-
         switch ($type) {
             case 'menus':
                 return static::getMenus();

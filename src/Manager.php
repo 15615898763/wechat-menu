@@ -43,7 +43,6 @@ class Manager
     public function getWechat()
     {
         $config = $this->getConfig('easyWechat');
-
         if (empty($config)) {
             throw new WechatMenuException('微信配置不能为空');
         }

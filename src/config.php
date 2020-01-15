@@ -6,7 +6,7 @@ return [
      *
      * 请注意，你填写的 'wechat-menu' 和 '/wechat-menu' 是有区别的
      */
-    'routePrefix' => 'wechat-menu',
+    'routePrefix' => '/admin-wechat-menu',
 
     /*
      * 存储微信菜单和事件设置的文件
@@ -23,10 +23,10 @@ return [
      * easy wechat 扩展的配置
      */
     'easyWechat' => [
-        'app_id' => 'app_id',
-        'secret' => 'secret',
-        'token' => 'token',
-
+        'app_id' => '',
+        'secret' => '',
+        'token' => '',
+        'aes_key' =>'',
         'log' => [
             'default' => 'dev', // 默认使用的 channel，生产环境可以改为下面的 prod
             'channels' => [
